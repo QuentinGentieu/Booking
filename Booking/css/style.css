@@ -1,0 +1,884 @@
+/* ##############################################
+####################  ALL  ######################
+#################################################*/
+
+/*Importation des couleurs*/
+:root {
+    --main-color: #0065FC; /* var(--main-color) */ /*pink*/
+    --second-color: #DEEBFF; /* var(--second-color) */ /*blue*/
+    --third-color: #D9D9D9; /* var(--third-color) */ /*grey*/
+  }
+
+/*Importation police d'ecriture*/
+@font-face {
+    font-family: Raleway;
+    src: local('fonts/Raleway-Regular.ttf');
+}
+
+/*Reglage de la page à 1400pixels*/
+body{
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1400px;
+	font-family: Raleway !Important;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+
+/*Espacement à gauche et à droite de la page pour laisser de la marge*/
+.space_margin{
+	margin-left: 2.5em;
+	margin-right: 3.315em;
+}
+
+/*Creation d'une box container pour aligner les elements au centre à l'horizontal*/
+.container{
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+}
+
+.container a{
+	text-decoration: none;
+	color: black;
+}
+
+
+/*Creation d'une classe pour une police  d'ecriture d'epaisseur de 400*/
+.Font_style_Regular{
+	font-family : Raleway;
+	font-weight : 400;
+	font-size : 1em;
+
+}
+
+/*Creation d'une classe pour une police  d'ecriture d'epaisseur de 600*/
+.Font_style_Medium{
+	font-family : Raleway;
+	font-weight : 600;
+	font-size : .85em;
+
+}
+
+/*Creation d'une classe pour une police  d'ecriture d'epaisseur de 700*/
+.Font_style_Bold_Regular{
+	font-family : Raleway;
+	font-weight : 700;
+	font-size : 1em;
+
+}
+
+/*Creation d'une classe pour une police  d'ecriture d'epaisseur de 700 faiblement gros*/
+.Font_style_Bold_Light{
+	font-family : Raleway;
+	font-weight : 700;
+	font-size : 1.1em;
+}
+
+/*Creation d'une classe pour une police  d'ecriture d'epaisseur de 700 moyennement gros*/
+.Font_style_Bold_Medium{
+	font-family : Raleway;
+	font-weight : 700;
+	font-size : 1.15em;
+}
+
+/*Creation d'une classe pour une police  d'ecriture d'epaisseur de 700 très gors*/
+.Font_style_Bold_Bold{
+	font-family: Raleway;
+	font-weight: bold;
+	font-size: 1.375em;
+}
+
+/* ##############################################
+####################  HEADER  ######################
+#################################################*/
+
+/*---------------LOGO--------------------------*/
+
+/*Parametre du Logo*/
+.img_header{
+	width: 3.8em;
+	height: 1.81em;
+}
+
+/*Parametre du logo pour par avoir la bar bleu au dessus*/
+.nav-item{
+	border-top: none;
+	margin-right: auto;
+	margin-top: 3.6em;
+}
+
+/*---------------NAVBAR------------------------*/
+
+/*Parametre de la navBar*/
+ul{
+	list-style-type: none;
+	align-self: center;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: -.5em;
+}
+
+/*Parametre pour les ecriture de la navbar*/
+.li-activate{
+	color: black;
+	display : inline-block;
+	margin-right:3.56em;
+	padding-top:3em;
+}
+
+/*Parametre quand le curseur passe au dessus de la navbar*/
+.li-activate:hover{
+	border-top: solid;
+	border-width: 2px;
+	color: var(--main-color);
+	font-weight: 500;
+}
+
+/*Creation de la bar en dessous des onglets de la navbar si l'ecran fait 769px ou moins*/
+@media screen and (max-width: 768px){
+	.li-activate:hover{
+		color: var(--main-color);
+		border-bottom: solid;
+		border-top: none;
+		border-width: 2px;
+		font-weight: 500;
+		border-top: none;
+	}
+}
+
+/*Desactive le style du a pour la navbar*/
+nav a {
+	text-decoration: none;
+	color: black;
+}
+
+
+/*##############################################
+####################  SECTION 1  ######################
+#################################################*/
+
+/*---------------TEXTE DE PRESENTATION------------------------*/
+
+/*Posisionnement du titre principal*/
+.First_title_position{
+	margin-top: 4.87em;
+}
+
+/* Positionnement de la description du titre principal*/
+.First_description_position{
+	margin-top: -.5em;
+}
+
+/*---------------CHAMPS DE SAISIE------------------------*/
+
+/*Parametre pour la saisie de texte*/
+form{
+	background: #fff;
+	width: 332px;
+	height: 49px;
+	display: flex;
+	margin-top: 1.25em;
+}
+
+/*Parametre pour l'ecriture dans la saisie de texte*/
+form input{
+	flex: 1;
+	border:none;
+	outline:none;
+	padding-right: 3.125em;
+	font-size: 1.15em;
+}
+/*bordure gris pour le formulaire*/
+.border_form{
+	border-style: solid;
+	border-width: 0.8px;
+	border-color: #F2F2F2;
+}
+
+/*Parametre du bouton "recherche" pour la saisie de texte*/
+form button{
+	background-color: var(--main-color);
+	padding: .94em;
+	border:none;
+	outline:none;
+	color: #fff;
+	letter-spacing:1px;
+	cursor: pointer;
+	border-radius: 0px .94em .94em 0px;
+	font-size: 1.15em;
+	font-family: Raleway;
+	font-weight: bold;
+}
+
+/*Parametre pour le petit logo localisation a cote de la saisie de texte*/
+form .fa-location-dot{
+	align-self: center;
+	padding: 1.02em 1.25em;
+	color: #000000;
+	background-color: #F2F2F2;
+	border-radius: .94em 0px 0px .94em;
+}
+
+/*Parametre du placeholder (texte d'exemple avant d'ecrire)*/
+::placeholder{
+	color: black;
+	padding-left:5px;
+	font-family: Raleway;
+	font-weight: bold;
+	font-size: 1.15em;
+}
+
+/*---------------FILTRES ET BOUTONS------------------------*/
+
+/*Parametre pour le texte "Filtres"*/
+.Filters_Section{
+	font-family: Raleway;
+	font-weight: bold;
+	font-size: 1.15em;
+	margin-top: 2.87em;
+	margin-right: .94em;
+}
+
+/*Creation du style du bouton*/
+.button {
+	margin: 35px 1.25em;
+	padding: 10px 1.25em;
+
+	background-color: white;
+	color: black;
+
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 5px;
+
+	box-sizing: border-box;
+
+	font-family: Raleway;
+	font-weight: bold;
+	font-size: 1.1em;
+
+	align-items: center;
+	justify-content: center;
+
+	text-decoration: none;
+}
+
+/*Creation couleur du bouton*/
+.buttonMainColor {
+	border-color: var(--third-color);
+}
+
+/*Creation de la bordure du bouton*/
+.buttonRounded {
+	border-radius: 39px;
+}
+
+/*Creation du style au survol du bouton*/
+.buttonHighlight:hover {
+	background-color: var(--second-color);
+	padding: 12px 22px;
+}
+
+/*Style du logo de billet pour le bouton*/
+.fa-money-bill-wave{
+	color : var(--main-color);
+	align-self: center;
+	margin-right : 10px;
+}
+
+/*Style du logo de bonhomme pour le bouton*/
+.fa-person{
+	color : var(--main-color);
+	align-self: center;
+	margin-right : 10px;
+}
+
+/*Style du logo de coeur pour le bouton*/
+.fa-heart{
+	color : var(--main-color);
+	align-self: center;
+	margin-right : 10px;
+}
+
+/*Style du logo de chien pour le bouton*/
+.fa-dog{
+	color : var(--main-color);
+	align-self: center;
+	margin-right : 10px;
+}
+
+/*---------------INFORMATION SUR LOGEMENT------------------------*/
+
+/*Creation du rond pour mettre le logo du "i" dedans*/
+.circle{
+	height: 24px;
+ 	width: 24px;
+ 	border-style: solid;
+ 	border-color: var(--third-color);
+ 	border-width: 1px;
+  	border-radius: 50%;
+  	display: inline-block;
+
+}
+
+/*Creation du style pour le logo "i"*/
+.fa-info{
+	align-self: center;
+	width: 2px;
+	height: 5px;
+	padding:4px 0px 0px 9px;
+	color: var(--main-color);
+}
+
+/*Creation du style du texte descriptif de l'information*/
+.Second_description_position{
+	height: auto;
+ 	/*width: 420px;*/
+ 	align-self: center;
+ 	margin-top: 5px;
+ 	margin-left: 11px;
+ 	margin-bottom: 39px;
+}
+
+/* ##############################################
+####################  SECTION 2  ######################
+#################################################*/
+
+/*-----------------HEBERGEMENT A MARSEILLE------------------------*/
+
+/*Creation du container pour les differents cartes*/
+.flex_container_first{
+	width: 66%;
+	height: auto;
+	border-radius: 1.25em;
+	background-color: #F2F2F2;
+	padding-top: 42px;
+	min-width: 500px;
+	padding-left:40px; 
+	padding-right :40px;
+	padding-bottom: 46px;
+}
+
+/*Creation du style pour placer le titre "Herbergement a Marseille"*/
+.second_title_position{
+	margin-left: .4em;
+	margin-top: -6px;
+	margin-bottom: -18px;
+}
+
+/*Creation du container pour la creation des cartes d'hebergement*/
+.container_cards{
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top:2.87em; 
+	grid-row-gap: 30px;
+
+}
+
+/*Creation des cartes d'hebergement a la vertical*/
+.card{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	max-height: 205px;
+	max-width :22.87em;
+	width: 30%;
+	height: auto;
+	border-radius: 1.25em;
+	border-width: 4px;
+	padding-bottom: .3em;
+	border-style: solid;
+	border-color: white;
+	background-color: white;
+
+
+}
+
+/*Creation d'un style pour le titre dans les cartes d'hebergements*/
+.card h3{
+
+	font-weight: bold;
+	font-family: Raleway;
+	font-size: .9em;
+	display: flex;
+	flex-direction: column;
+	/*max-width: 204px;*/
+	width: 100%;
+	height: .94em;
+}
+
+/*Creation d'un style pour les paragraphes dans les cartes d'hebergements*/
+.card p{
+
+	font-weight: lighter;
+	font-family: Raleway;
+	font-size: .9em;
+	display: flex;
+	flex-direction: column;
+	max-width: 215px;
+	width: 100%;
+	height: .94em;
+}
+
+/*Parametre par l'image dans la cartes*/
+.img{
+	border-radius: 1.25em;
+	border-bottom-right-radius: 0em;
+	border-bottom-left-radius: 0em;
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+	width: 100%;
+}
+
+/*Position du titre dans les cartes*/
+.position_card_title{
+	margin-top: 4px;
+	margin-left: 1em;
+	margin-bottom: 0px;
+}
+
+/*Position du sous titre dans les cartes*/
+.position_card_description{
+	margin-top: 9px;
+	margin-left: 1em;
+	margin-bottom: 0px;
+}
+
+/*Parametre des etoiles, du positionnemenent et de la taille*/
+.style_star{
+	margin-top: 9px;
+	display: flex;
+	flex-direction: row;
+	/*height: 1.25em;*/
+	font-size: 13px;
+	width:13px;
+}
+
+/*Position des etoiles dans la cartes*/
+.star_position{
+	margin-left: 1em;
+}
+
+/*Creation de la couleur pour les etoiles de notation*/
+.fa-star{
+	color: var(--main-color);
+}
+
+/*Couleur des etoiles non coloré*/
+.star_nocolored{
+	color: lightgrey;
+}
+
+/*Creation du style pour le deuxieme titre dans le container "Hebergement a Marseille"*/
+.position_under_title{
+	margin-top: 2.5em;
+	/*width: 107px;*/
+	height: 21px;
+}
+
+.more{
+	text-decoration: none;
+	color: black;
+}
+/*---------------LES PLUS POPULAIRES------------------------*/
+
+/*Creation du deuxieme container pour le container "Les plus populaires"*/
+.flex_container_second{
+	width: 33%;
+	max-width: 351px;
+	min-width: 350px;
+	/*height: 626px;*/
+	border-radius: 1.25em;
+	background-color: #F2F2F2;
+	margin-left: 2.5em;
+	padding: 2.1em;
+	padding-right: 2.5em;
+}
+
+/*Permet de mettre de la place entre les elements*/
+.flex_container_second .container{
+	justify-content: space-between;
+}
+
+/*Position pour le titre du deuxieme container "Les plus populaires"*/
+.third_title_position{
+	margin-top: 0em;
+	width: 250px;
+}
+
+/*Style du logo du graphique pour la parti "les plus populaire"*/
+.fa-chart-line{
+	color : var(--main-color);
+	/*margin-left: 118px;*/
+	width: 26px;
+	height: 26px;
+	/*margin-right: 42px;*/
+	margin-top: 1.6em;
+}
+
+/*Creation du container pour les cartes du container "Les plus populaires"*/
+.container_cards_second{
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top:8px; 
+	grid-row-gap: 33px;
+}
+
+/*Parametre des cartes du second container a la vertical*/
+.card_second{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	max-height: 144px;
+	max-width :343px;
+	width: 100%;
+	height: auto;
+	border-radius: 1.25em;
+	border-width: 5px;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	border-style: solid;
+	border-color: white;
+	background-color: white;
+}
+
+/*Parametre du titre des cartes du second container*/
+.card_second h3{
+
+	font-weight: bold;
+	font-family: Raleway;
+	font-size: .9em;
+	/*width: 204px;*/
+	height: .94em;
+
+}
+
+/*Parametre des sous titre des cartes du second container*/
+.card_second p{
+
+	font-weight: lighter;
+	font-family: Raleway;
+	font-size: 1em;
+	width: 215px;
+	/*height: .94em;*/
+}
+
+/*Parametre pour les images des cartes du second container*/
+.img_second{
+	border-radius: 1.25em;
+	border-top-right-radius: 0em;
+	border-top-left-radius: 0em;
+	max-width: 8.56em;
+	max-height: 9em;
+	height: auto;
+	width: 38%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+/*Position des titre pour les cartes du second container*/
+.position_card_title_second{
+	margin-top: -9em;
+	margin-left: 10.375em;
+}
+
+/*Position des sous titre pour les cartes du second container*/
+.position_card_description_second{
+	margin-top: 28px;
+	margin-left: 9.375em;
+}
+
+/*Position des sous titre dans les cartes du second container*/
+.position_card_description_second_expetion{
+	margin-top: -9px;
+	margin-left: 9.375em;
+}
+
+/*Parametre du style des etoiles pour les cartes du second container*/
+.style_star_second{
+	margin-top: 30px;
+	display: flex;
+	flex-direction: row;
+	/*height: 1.25em;*/
+	font-size: 13px;
+	width:13px;
+}
+
+/*Position des etoiles dans les cartes du second container*/
+.star_position_second{
+	margin-left: 9.375em;
+	    margin-top: -8px;
+    	/*margin-bottom: 8px;*/
+}
+
+/*Position des etoiles dans les cartes du second container*/
+.star_position_second_expetion{
+	margin-left: 9.375em;
+	margin-top: 8px;
+	/*margin-bottom: 1.25em;*/
+
+}
+
+/* ##############################################
+####################  SECTION 3  ######################
+#################################################*/
+
+/*---------------ACTIVITE A MARSEILLE------------------------*/
+
+/*Parametre du container pour les cartes des activites*/
+.flex_container_activity{
+	width: 100%;
+	/*height: 626px;*/
+	border-radius: 1.25em;
+	margin-bottom: 4em;
+}
+
+/*Poisiton du titre pour la partie "Activite a Marseille"*/
+.fourth_title_position{
+	margin-top: 60px;
+	margin-bottom: -18px;
+}
+
+/*Parametre pour les cartes qui seront dans le container*/
+.container_card_activity{
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top:2.87em; 
+}
+
+/*Parametre des cartes dans la partie activite*/
+.card_activity{
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	height: auto;
+	width :23%;
+	border-radius: 1.25em;
+	border-width: 7px;
+	display: flex;
+	flex-direction: column;
+
+}
+
+/*Parametre des titres des cartes dans la partie activite*/
+.card_activity h3{
+
+	font-weight: bold;
+	font-family: Raleway;
+	font-size: .9em;
+	width: auto;
+	height: .94em;
+
+}
+
+/*Parametre des images dans les activites*/
+.img_activity{
+	border-radius: 1.25em;
+	border-bottom-right-radius: 0em;
+	border-bottom-left-radius: 0em;
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: flex-start;
+}
+
+/*Position des titres des cartes dans la partie activite*/
+.position_card_title_acitity{
+	margin-left:19px;
+	margin-top: 1.25em;
+}
+
+/* ##############################################
+####################  FOOTER  ######################
+#################################################*/
+
+/*Parametre du container pour le footer*/
+.flex_container_footer{
+	width: 1339px;
+	height: 225px;
+	background-color: #F2F2F2;
+	padding-bottom: 1.5em;
+}
+
+/*Parametre du container les textes du footer*/
+.container_text_footer{
+	display: flex;
+	flex-direction: row;
+	/*justify-content: space-between;*/
+	flex-wrap: wrap;
+}
+
+/*Creation de la premiere carte pour le footer*/
+.card_footer{
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+	margin-left: 4.375em;
+
+}
+
+/*Creation de la deuxieme carte pour le footer*/
+.card_footer2{
+	margin: 0 7%;
+	width: 20%;
+	display: flex;
+	flex-direction: column;
+}
+
+/*Creation de la troisieme carte pour le footer*/
+.card_footer3{
+	display: flex;
+	flex-direction: column;
+	/*margin-right: 348px;*/
+
+}
+
+/*Creation du style des titres du footer*/
+.footer_title{
+	font-size: 1.15em;
+	font-weight: bold;
+	font-family: Raleway;
+	margin-top: 45px;
+}
+
+/*Creation du style des sous titres du footer*/
+.footer_description{
+	font-weight: lighter;
+	font-family: Raleway;
+	font-size: 1em;
+	display: flex;
+	text-align: start;
+	margin: 12px;
+	margin-left: 0px;
+}
+
+
+/* ##############################################
+####################  RESPONSIVE  ######################
+#################################################*/
+
+@media screen and (max-width: 967px){
+	body{
+		font-size: 14px;
+	}
+.container{
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+/*Aligne les elements de la nav bar au milieu*/
+ul{
+	align-items: center;
+}
+
+/*Fait prendre le formulaire 100% de la largeur de l'ecran*/
+form{
+	width: 100%;
+}
+
+/*Rectifie le padding droit et la taille de l'ecriture dans le formulaire*/
+form input{
+	padding-right: 0;
+	font-size: 1em;
+}
+
+/*Fait en sorte que le container prennent 90% de la largeur de l'ecran et que la largeur minimal soit automatique*/
+.flex_container_first{
+	width: 90%;
+	min-width: auto;
+}
+
+/*Fait en sorte que le container se place sous forme de colonne*/
+.Filters_Section_C{
+	flex-direction: column;
+}
+
+/*Enleve le wrap*/
+.no_wrap_c{
+	flex-wrap: nowrap;
+}
+
+/*On change le positionnement des buttons*/
+.buttonMainColor {
+	padding: 1em;
+	margin: 10px;
+	display: block;
+}
+
+/*Regle ea taille du container en largeur mais aussi la marge au dessus et en dessous*/
+.flex_container_second{
+	margin-top: 2em;
+	width: 90%;
+	min-width: auto;
+	margin-left: 0;
+}
+
+/*Regle la taille des cartes a minimum 200px*/
+.card{
+	min-width: 200px;
+}
+
+/*Ecarte le contenue du container les une des autres*/
+.container_card_activity{
+	justify-content: space-around;
+}
+
+/*Regle la taille est l'espace des cartes qui se trouve dans l'onglet des activites*/
+.card_activity{
+	min-width: 200px;
+	margin-top: 2em;
+}
+
+/*Replace bien les elements dans le container au milieu et faire prendre toute la largeur*/
+.flex_container_footer{
+	text-align: center;
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+
+/*Regle la largeur des trois parties du footer à prendre 100% de la largeur*/
+.card_footer,.card_footer2,.card_footer3 {
+	width: 100%;
+	margin: 0;
+}
+
+/*Aligne l'emplacement du contenu dans le footer au milieu de celui ci*/
+.footer_description{
+	text-align: center;
+	display: block;
+} 
+}
+@media screen and (max-width: 1124px){
+	body{
+		font-size: 14px;
+	}
+	.Font_style_Bold_Light {
+		font-size: 1em;
+	}
+	form .fa-location-dot{
+	align-self: center;
+	padding: 1.25em 1.25em;
+	color: #000000;
+	background-color: #F2F2F2;
+	border-radius: .94em 0px 0px .94em;
+	}
+}
+
+@media screen and (max-width: 405px){
+	body{
+		font-size: 12px;
+	}
+	.card{
+		width: auto
+	}
+	.third_title_position {
+     width: auto; 
+}
+}

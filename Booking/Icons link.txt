@@ -1,0 +1,17 @@
+billet = <i class="fa-solid fa-money-bill-wave"></i> ok
+
+chien = <i class="fa-solid fa-dog"></i> ok
+
+coeur = <i class="fa-solid fa-heart"></i> ok
+
+information = <i class="fa-solid fa-info"></i> ok
+
+etoile = <i class="fa-solid fa-star"></i> ok 
+
+bonhomme = <i class="fa-solid fa-person"></i> ok
+
+graphique = <i class="fa-solid fa-chart-line"></i> ok
+
+loupe = <i class="fa-solid fa-magnifying-glass"></i> ok 
+
+localisation point = <i class="fa-solid fa-location-dot"></i> ok
